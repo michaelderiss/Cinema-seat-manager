@@ -40,6 +40,16 @@ Usa este comando para validar solo TypeScript sin iniciar Vite:
 npm run typecheck
 ```
 
+## Como ejecuto `main.ts` desde la terminal?
+
+Si quieres ejecutar `./src/main.ts` directamente y ver la salida de `console.log` en la terminal, usa:
+
+```bash
+npm run console
+```
+
+Este comando ya viene conectado por defecto a `./src/main.ts`.
+
 ## Donde escribo mi codigo?
 
 Depende del lenguaje:

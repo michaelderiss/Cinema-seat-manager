@@ -41,6 +41,16 @@ Use this command to validate only TypeScript without starting Vite:
 npm run typecheck
 ```
 
+## How do I run `main.ts` from the terminal?
+
+If you want to execute `./src/main.ts` directly and see `console.log` output in the terminal, run:
+
+```bash
+npm run console
+```
+
+This command is already wired to `./src/main.ts`.
+
 ## Where do I write my code?
 
 It depends on the language:
@@ -88,8 +98,10 @@ import { myVar } from "./file2";
 
 This boilerplate is compatible with Vercel in one step.
 
+<!-- hide -->
 ## Contributors
 
 This template was built as part of the [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [ehiber](https://github.com/ehiber) and contributors. Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
 
 You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
+<!-- endhide -->
