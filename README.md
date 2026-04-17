@@ -89,8 +89,6 @@ This boilerplate is compatible with Vercel in one step.
 
 ## Contributors
 
-Thanks to [ehiber](https://github.com/ehiber) for the template setup, documentation, and maintenance.
+This template was built as part of the [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [ehiber](https://github.com/ehiber) and contributors. Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
 
-## Footer
-
-This and many other projects are built by students as part of the [4Geeks Academy Bootcamp](https://4geeksacademy.co/). Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
