@@ -22,6 +22,24 @@ npm run start
 
 Then open your local URL in the browser (usually `http://localhost:5173`).
 
+## How do I run this in GitHub Codespaces?
+
+Run the same development server:
+
+```bash
+npm run start
+```
+
+Vite is configured to listen on `0.0.0.0`, so Codespaces can detect and forward port `5173` automatically.
+
+## How do I run only the TypeScript check?
+
+Use this command to validate only TypeScript without starting Vite:
+
+```bash
+npm run typecheck
+```
+
 ## Where do I write my code?
 
 It depends on the language:
@@ -69,12 +87,10 @@ import { myVar } from "./file2";
 
 This boilerplate is compatible with Vercel in one step.
 
-## Thank you
-
-This and many other projects are built by students as part of the [4Geeks Academy Bootcamp](https://4geeksacademy.co/), by [@ehiber](https://github.com/ehiber). Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
 ## Contributors
 
-Thanks to:
+Thanks to [ehiber](https://github.com/ehiber) for the template setup, documentation, and maintenance.
 
-1. [ehiber](https://github.com/ehiber) - template setup, documentation, and maintenance.
+## Footer
+
+This and many other projects are built by students as part of the [4Geeks Academy Bootcamp](https://4geeksacademy.co/). Find out more about our [AI Engineering Course](https://4geeksacademy.com/us/coding-bootcamps/ai-engineering), [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
