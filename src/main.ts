@@ -12,6 +12,7 @@ if (typeof document !== "undefined") {
             </div>
             <div class="flex gap-2">
               <button id="check-adjacent" class="rounded-xl border border-slate-300 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100">Check adjacent seats</button>
+              <button id="reserve-all" class="rounded-xl bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-sky-500">Reserve all</button>
               <button id="reset-seats" class="rounded-xl bg-rose-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-rose-500">Reset</button>
             </div>
           </div>
@@ -35,9 +36,10 @@ if (typeof document !== "undefined") {
       const adjacentStatus = document.querySelector<HTMLSpanElement>("#adjacent-status");
       const status = document.querySelector<HTMLParagraphElement>("#status");
       const resetButton = document.querySelector<HTMLButtonElement>("#reset-seats");
+      const reserveAllButton = document.querySelector<HTMLButtonElement>("#reserve-all");
       const checkAdjacentButton = document.querySelector<HTMLButtonElement>("#check-adjacent");
 
-      if (!seatMap || !availableCount || !reservedCount || !adjacentStatus || !status || !resetButton || !checkAdjacentButton) {
+      if (!seatMap || !availableCount || !reservedCount || !adjacentStatus || !status || !resetButton || !reserveAllButton || !checkAdjacentButton) {
         return;
       }
 
@@ -93,6 +95,24 @@ if (typeof document !== "undefined") {
       resetButton.addEventListener("click", () => {
         resetSeating();
         status.textContent = "All seats were reset.";
+        renderSeats();
+        paintStats();
+      });
+
+      reserveAllButton.addEventListener("click", () => {
+        let newlyReserved = 0;
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < columns; c++) {
+            if (reserveSeat(r, c)) {
+              newlyReserved++;
+            }
+          }
+        }
+
+        status.textContent = newlyReserved > 0
+          ? `Reserved ${newlyReserved} seat${newlyReserved === 1 ? "" : "s"}.`
+          : "All seats are already reserved.";
+
         renderSeats();
         paintStats();
       });
