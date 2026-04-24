@@ -9,4 +9,33 @@ if (typeof document !== "undefined") {
 
 console.log("Hello from src/main.ts");
 
+
+//create seating matrix for a theater with 8 rows and 10 columns
+
+const rows = 8;
+const columns = 10;
+
+const seating: boolean[][] =Array.from({ length: rows }, () =>
+  new Array(columns).fill(false)
+);
+
+// Function to reserve a seat
+function reserveSeat(row: number, column: number): boolean 
+{
+  if(row >= 0 && row < rows && column >= 0 && column < columns) 
+    {
+      if(!seating[row][column]) 
+      {
+        seating[row][column] = true;
+        console.log(`Seat at row ${row + 1}, column ${column + 1} has been reserved.`);
+        return true;
+      }
+    }
+    console.log(`Seat at row ${row + 1}, column ${column + 1} is already reserved or invalid.`);
+  return false;
+}
+  
+
+
+
 export {};
