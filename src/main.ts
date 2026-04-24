@@ -34,6 +34,24 @@ function reserveSeat(row: number, column: number): boolean
     console.log(`Seat at row ${row + 1}, column ${column + 1} is already reserved or invalid.`);
   return false;
 }
+
+function displaySeats(): void
+{
+  for(let r = 0; r < rows; ++r)
+  {
+    for(let c = 0; c < columns; ++c)
+    {
+      if(seating[r][c])
+      {
+        console.log('X');
+      }
+      else
+      {
+        console.log('L');
+      }
+    }
+  }
+}
   
 
 
