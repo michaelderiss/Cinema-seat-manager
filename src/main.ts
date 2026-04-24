@@ -35,22 +35,34 @@ function reserveSeat(row: number, column: number): boolean
   return false;
 }
 
-function displaySeats(): void
+function displaySeats(): void 
 {
+  for (let r = 0; r < rows; r++) 
+  {
+    let rowString = ""; // Start a fresh string for this row
+    for (let c = 0; c < columns; c++) 
+    {
+      // Add the symbol and a space to the row string
+      rowString += seating[r][c] ? "X " : "L ";
+    }
+    console.log(rowString); // Print the whole row at once
+  }
+}
+
+function availableSeats(): void
+{
+  let numTaken = 0;
   for(let r = 0; r < rows; ++r)
   {
     for(let c = 0; c < columns; ++c)
     {
       if(seating[r][c])
       {
-        console.log('X');
-      }
-      else
-      {
-        console.log('L');
+        ++numTaken;
       }
     }
   }
+  console.log(`There are ${numTaken} seats taken and ${80 - numTaken} seats available`);
 }
   
 
