@@ -1,6 +1,12 @@
 export const rows = 8;
 export const columns = 10;
 
+export type AdjacentSeatPair = {
+  row: number;
+  leftColumn: number;
+  rightColumn: number;
+};
+
 const seating: boolean[][] = Array.from({ length: rows }, () =>
   new Array(columns).fill(false)
 );
@@ -17,15 +23,23 @@ export function reserveSeat(row: number, column: number): boolean {
 }
 
 export function adjacentSeats(): boolean {
+  return firstAdjacentSeatPair() !== null;
+}
+
+export function firstAdjacentSeatPair(): AdjacentSeatPair | null {
   for (let r = 0; r < rows; ++r) {
     for (let c = 0; c < columns - 1; ++c) {
       if (!seating[r][c] && !seating[r][c + 1]) {
-        return true;
+        return {
+          row: r,
+          leftColumn: c,
+          rightColumn: c + 1,
+        };
       }
     }
   }
 
-  return false;
+  return null;
 }
 
 export function displaySeats(): void {
